@@ -1,0 +1,453 @@
+/* ================= RESET ================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    transition:all 0.3s ease;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ================= GLOBAL ================= */
+
+img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+section{
+    padding:120px 8%;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+}
+
+/* NAV LINKS */
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    position:relative;
+}
+
+/* underline animation */
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0%;
+    height:2px;
+    background:#06b6d4;
+    transition:0.3s;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+/* NAV BUTTONS */
+
+.nav-btns{
+    display:flex;
+    gap:10px;
+}
+
+.donate-btn{
+    padding:10px 20px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(45deg,#4f46e5,#06b6d4);
+    color:white;
+    cursor:pointer;
+}
+
+.donate-btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px rgba(6,182,212,0.3);
+}
+
+#theme-toggle{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    border:none;
+    background:#1e293b;
+    color:white;
+    cursor:pointer;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    background:url("https://images.unsplash.com/photo-1593113598332-cd59a93b6136") center/cover no-repeat;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+    position:relative;
+    text-align:center;
+    max-width:900px;
+}
+
+.hero-content h1{
+    font-size:72px;
+    font-weight:800;
+    line-height:1.1;
+}
+
+.hero-content p{
+    font-size:20px;
+    margin-top:20px;
+    color:#cbd5e1;
+}
+
+.hero-buttons{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+
+.primary-btn,
+.secondary-btn{
+    padding:15px 30px;
+    border-radius:40px;
+    cursor:pointer;
+    font-weight:600;
+    border:none;
+}
+
+.primary-btn{
+    background:#06b6d4;
+    color:white;
+}
+
+.secondary-btn{
+    background:transparent;
+    border:2px solid white;
+    color:white;
+}
+
+/* BUTTON HOVER */
+.primary-btn:hover,
+.secondary-btn:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 25px rgba(0,0,0,0.4);
+}
+
+/* ================= IMPACT ================= */
+
+.impact{
+    background:#111827;
+    text-align:center;
+}
+
+.impact h2{
+    font-size:52px;
+}
+
+.impact p{
+    color:#cbd5e1;
+    margin-bottom:50px;
+}
+
+.impact-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.impact-card{
+    background:#1e293b;
+    padding:40px;
+    border-radius:20px;
+}
+
+/* CARD HOVER */
+.impact-card:hover{
+    transform:translateY(-12px) scale(1.03);
+    box-shadow:0 20px 35px rgba(0,0,0,0.4);
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about-image img{
+    height:520px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+/* IMAGE HOVER */
+.about-image img:hover{
+    transform:scale(1.05);
+}
+
+.about-content h2{
+    font-size:48px;
+}
+
+.about-content p{
+    color:#cbd5e1;
+    line-height:1.8;
+}
+
+/* ================= MISSION ================= */
+
+.mission-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+}
+
+.mission-card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:15px;
+}
+
+/* HOVER */
+.mission-card:hover{
+    transform:translateY(-10px);
+}
+
+/* ICONS */
+.icon i{
+    font-size:30px;
+    color:#06b6d4;
+}
+
+/* ================= PROGRAMS ================= */
+
+.programs{
+    background:#111827;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:52px;
+}
+
+.section-title p{
+    color:#cbd5e1;
+}
+
+.program-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.program-card{
+    background:#1e293b;
+    padding:30px;
+    border-radius:20px;
+}
+
+/* HOVER */
+.program-card:hover{
+    transform:translateY(-12px) scale(1.02);
+    box-shadow:0 15px 30px rgba(0,0,0,0.4);
+}
+
+.program-icon i{
+    font-size:40px;
+    color:#06b6d4;
+}
+
+/* ================= TESTIMONIAL ================= */
+
+.testimonial-card{
+    background:#1e293b;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+}
+
+.stars i{
+    color:#facc15;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery{
+    background:#111827;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery-item img{
+    height:280px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+/* IMAGE HOVER */
+.gallery-item img:hover{
+    transform:scale(1.08);
+}
+
+/* ================= VOLUNTEER ================= */
+
+#volunteerForm{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    max-width:600px;
+    margin:auto;
+}
+
+#volunteerForm input,
+#volunteerForm textarea{
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#1e293b;
+    color:white;
+}
+
+/* ================= BUTTON ================= */
+
+#volunteerForm button{
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(45deg,#06b6d4,#4f46e5);
+    color:white;
+    cursor:pointer;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+    text-align:center;
+    padding:40px;
+    background:#0b1220;
+    color:#cbd5e1;
+}
+#successPopup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.8);
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+}
+
+.popup-content{
+    background:#1e293b;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    max-width:450px;
+    z-index:100000;
+}
+
+/* ================= LIGHT MODE ================= */
+
+body.light-mode{
+    background:#f8fafc;
+    color:#0f172a;
+}
+
+body.light-mode .navbar{
+    background:rgba(255,255,255,0.9);
+}
+
+body.light-mode .impact,
+body.light-mode .programs,
+body.light-mode .gallery{
+    background:#e2e8f0;
+}
+
+body.light-mode .impact-card,
+body.light-mode .program-card,
+body.light-mode .testimonial-card,
+body.light-mode .mission-card{
+    background:white;
+    color:#0f172a;
+}
+
+body.light-mode p{
+    color:#334155;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+    .hero-content h1{
+        font-size:40px;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    .nav-links{
+        display:none;
+    }
+}
